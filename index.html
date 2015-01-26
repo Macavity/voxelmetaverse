@@ -1,50 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Voxpopuli</title>
-<style>
-body {
-  background-color: gray;
-  margin: 0px;
-  overflow: hidden;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-#crosshair {
-  /* centered on screen */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -16px 0 0 -16px;
-  width: 32px;
-  height: 32px;
-}
-
-#stats {
-  bottom: 0px;
-  right: 0px;
-}
-
-.logo {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-.errorMessage {
-  text-align: center;
-  width: 200px;
-  margin: 20px auto;
-}
-</style>
+    <meta charset="utf-8">
+    <title>Voxpopuli</title>
+    <script src="build/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="all" />
 </head>
 <body>
-<img id="logo" class="logo" src="logo-white.png">
-<div id="container"></div>
-<div id="crosshair"><img src="crosshair4.png"></div>
-<script src="bundle.js"></script>
+    <img id="logo" class="logo" src="logo-white.png">
+    <div id="container"></div>
+    <div id="crosshair"><img src="crosshair4.png"></div>
 </body>
 </html>

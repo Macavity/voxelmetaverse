@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:deathcap/voxpopuli.git"
+    "url": "git@github.com:macavity/voxpopuli.git"
   },
   "dependencies": {
     "ever": "0.0.3",
@@ -69,9 +69,11 @@
     "voxel-commands": "^0.3.0"
   },
   "devDependencies": {
-    "coffeeify": "0.6.0",
-    "browserify": "5.6.1",
-    "beefy": "2.0.2"
+      "grunt": "~0.4.5",
+      "coffeeify": "0.6.0",
+      "browserify": "5.6.1",
+      "grunt-browserify": "3.3.0",
+      "beefy": "2.0.2"
   },
   "scripts": {
     "start": "beefy index.coffee:bundle.js 8080 -- --transform coffeeify --debug"
