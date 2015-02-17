@@ -13,6 +13,7 @@ require 'voxel-recipes'
 require 'voxel-quarry'
 require 'voxel-measure'
 require 'voxel-webview'
+require 'voxel-vr'
 require 'voxel-workbench'
 require 'voxel-furnace'
 require 'voxel-chest'
@@ -58,7 +59,7 @@ require 'kb-bindings-ui'
 createEngine = require 'voxel-engine'
 
 main = () ->
-  console.log 'voxpopuli starting'
+  console.log 'voxelmetaverse starting'
 
   createEngine {require:require, exposeGlobal:true, pluginOpts:
     'voxel-engine':
@@ -126,7 +127,8 @@ main = () ->
     'voxel-recipes': {}
     'voxel-quarry': {}
     'voxel-measure': {}
-    'voxel-webview': {onDemand: true}  # disabled by default until https://github.com/deathcap/voxel-webview/issues/3
+    'voxel-webview': {}
+    'voxel-vr': {onDemand: true} # has to be enabled after gl-init to replace renderer
     'voxel-carry': {inventoryWidth:10, inventoryRows:5}
     'voxel-bucket': {fluids: ['water', 'lava']}
     'voxel-fluid': {}
@@ -160,7 +162,7 @@ main = () ->
     #'voxel-health-fall': {} # requires voxel-player
     'voxel-food': {}
     'voxel-sfx': {}
-    'voxel-fly': {flySpeed: 0.8, onDemand: true}
+    'voxel-fly': {flySpeed: 0.8, onDemand: true} # TODO: update for voxel-physics-engine
     'voxel-gamemode': {}
     'voxel-sprint': {}
     'voxel-inventory-hotbar': {inventorySize:10}
@@ -182,7 +184,7 @@ main = () ->
 
     # the GUI window (built-in toggle with 'H')
     #'voxel-debug': {} # heavily three.js dependent
-    'camera-debug': {}
+    'camera-debug': {} # TODO: port from game-shell-fps-camera
     'voxel-plugins-ui': {}
     'kb-bindings-ui': {}
   }
