@@ -9,10 +9,9 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'build/main.js': ['*.coffee']
+                    'build/main.js': ['js/main.js']
                 },
                 options: {
-                    transform: ['coffeeify'],
                     browserifyOptions: {
                         debug: true
                     }
@@ -26,7 +25,7 @@ module.exports = function(grunt) {
         watch: {
             browserify: {
                 files: [
-                    "/**/*.coffee"
+                    "/js/**/*.js"
                 ],
                 tasks: ["browserify"]
             }
@@ -34,6 +33,7 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks("grunt-browserify");
+    grunt.loadNpmTasks("grunt-contrib-watch");
 
     // Used during development
     grunt.registerTask("default", function(){
